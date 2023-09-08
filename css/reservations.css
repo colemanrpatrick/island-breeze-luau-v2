@@ -1,0 +1,530 @@
+#book-now {
+  display: none;
+}
+/*==================================*/
+#luau-gallery {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 60em;
+}
+.gallery-image {
+  width: 3em;
+  height: 3em;
+  background-size: cover;
+  background-position: center;
+  font-size: 5em;
+  border: 5px solid #cc935f;
+  margin: 0.05em;
+  flex-grow: 2;
+  background-color: #333;
+}
+.addToCartRow p {
+  width: 90%;
+  position: relative;
+  max-width: 55em;
+  display: block;
+  margin: 2em auto;
+  line-height: 2.5em;
+  text-align: center;
+}
+.addToCartRow {
+  background-color: rgb(224, 189, 125);
+}
+.luau-sub-header {
+  background-image: url("../images/island-breeze-courtyard-mariot-kona-darker.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+#addToCartHeader {
+  background-image: url("../images/islandbreezeohanaluaubanner.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#addToCartHeader h2 {
+  font-size: 3em;
+  color: white;
+  padding: 5em 1em 4em 1em;
+  width: 100%;
+  text-align: center;
+  background-color: #1e345699;
+  font-family: "Montserrat", system-ui, sans-serif;
+  line-height: 1em;
+  text-shadow: 0em 0em 1em black;
+}
+#addToCartHeader b {
+  font-family: "Kaushan Script";
+}
+#addToCartHeader #reservations {
+  left: 50%;
+  transfom: ;
+  transform: translate(-50%);
+  right: 0;
+  bottom: 2em;
+  bottom: ;
+  border: 0;
+}
+.addToCartRow p span {
+  font-family: "Kaushan Script";
+  font-size: 2em;
+  color: #278dac;
+  padding-right: 0.15em;
+}
+.luau-sub-header h2 {
+  font-size: 2.5em;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 3em;
+  line-height: 0.75em;
+}
+.luau-sub-header h2 span {
+  font-family: "Montserrat";
+  font-size: 0.5em;
+}
+.addToCartRow h2 {
+  width: 100%;
+  text-align: center;
+  padding-top: 1em;
+  color: #278dac;
+  font-size: 2.5em;
+}
+.luau-sub-header p {
+  color: white;
+  padding: 6em;
+  line-height: 2.5em;
+  max-width: 60em;
+  width: 100%;
+  margin: 0 auto;
+  text-shadow: 0em 0em 1em black;
+}
+
+.bulletpointstyles {
+  max-width: 40em;
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1em;
+  padding: 3em;
+}
+.bulletpointstyles li {
+  list-style-type: circle !important;
+  list-style-position: outside;
+  padding: 0.5em;
+  font-family: "Montserrat";
+  font-size: 1.15em;
+  line-height: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+#buffet-menu {
+  background-image: url("../images/tapasTransparent.png");
+  background-size: 8em;
+  background-color: rgb(228, 218, 194);
+}
+#buffet-menu .bulletpointstyles {
+  column-count: 2;
+  max-width: 60em;
+}
+#buffet-menu .bulletpointstyles li {
+  list-style-type: none;
+}
+@media (max-width: 900px) {
+  .bulletpointstyles {
+    padding: 1em;
+  }
+  .luau-sub-header p {
+    padding: 6em 3em;
+  }
+}
+/*===========*/
+#dateInput {
+  height: 0;
+  width: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+#reservation-window {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 998;
+  background-color: #000000cf;
+  top: 0;
+  left: 0;
+}
+#reservation-window.hidden {
+  display: none;
+}
+#reservation-window.active {
+  display: block;
+}
+#reservation-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  border-radius: 1em;
+  width: 90%;
+  max-width: 35em;
+  background-image: url("../images/tapasTransparent.png");
+  background-size: 10em;
+  background-color: #e1d6c0;
+}
+#close-reservation {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  background: none;
+  border: 0.15em solid;
+  color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#close-reservation .material-symbols-outlined {
+  font-size: 2.5em;
+}
+/* custom JQUERY UI Datepicker */
+.ui-datepicker-inline.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+  max-width: 50em;
+  width: 100%;
+}
+.ui-state-default {
+  height: 5em;
+}
+.ui-datepicker {
+  width: auto;
+  max-width: 40em;
+}
+.ui-widget-header {
+  background: #fff;
+  color: #498192;
+  font-weight: bold;
+  border: 0;
+}
+.ui-datepicker-calendar th span {
+  font-weight: normal;
+}
+.ui-widget.ui-widget-content {
+  margin: 0 auto;
+  border: none;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-button,
+.ui-button {
+  border: none;
+  background: #00735d;
+  color: white;
+  padding: 0em 0.25em 0.25em 2em;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  border: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+  border: none;
+  background: white;
+  font-weight: normal;
+  color: #212121;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  background: #e1c115;
+  color: #498192;
+  font-weight: bold;
+}
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+  background: #00735d;
+  border: 0;
+  color: gold;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  background: gold;
+  font-weight: normal;
+  color: #00735d;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+  background: #ededed;
+  font-weight: normal;
+}
+#calendar-message,
+#price-message {
+  display: block;
+  background-color: #8a0000;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0 auto;
+  font-size: 0.9em;
+}
+#calendar-message span,
+#calendar-message p,
+#price-message span,
+#price-message p {
+  color: white;
+  font-size: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+#calendar-message.hidden,
+#price-message.hidden {
+  display: none;
+}
+#calendar-message.visible,
+#price-message.visible {
+  display: block;
+}
+#calendar-message .material-symbols-outlined,
+#price-message .material-symbols-outlined {
+  font-size: 1.25em;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 0.15em;
+  margin: 0em 0.25em;
+}
+/*===========================*/
+.package-title {
+  text-transform: capitalize;
+  color: #044f20;
+  line-height: 1em;
+  padding-bottom: 0.75em;
+  font-size: 1.75em;
+}
+.next-btn,
+.prev-btn {
+  background-color: #044f20;
+  color: #fafafa;
+  font-size: 1em;
+  padding: 0.5em 2.5em;
+  border-radius: 2em;
+  text-transform: capitalize;
+  border: 0;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Kaushan Script";
+}
+.next-btn:hover,
+.prev-btn:hover {
+  color: gold;
+}
+.reservation-page.hidden {
+  display: none;
+}
+.reservation-page.active {
+  display: block;
+  text-align: center;
+  padding-top: 2em;
+}
+/*===========================*/
+.price-container {
+  display: table;
+  list-style-type: none;
+  width: 100%;
+  margin-top: 0.5em;
+  padding-bottom: 0.5em;
+  vertical-align: center !important;
+}
+.price-container li:nth-child(1) {
+  width: 20%;
+  display: table-cell;
+  text-align: center;
+}
+.price-container li:nth-child(2) {
+  display: table-cell;
+  width: 70%;
+  text-align: center;
+  padding: 0em 1em;
+}
+.price-container li:nth-child(3) {
+  display: table-cell;
+  text-align: center;
+}
+.price-container .price-control {
+  height: 0;
+  width: 0;
+  border: 0;
+}
+.list-price,
+.sale-price {
+  display: inline-block;
+  width: 5em;
+  text-align: center;
+  color: #044f20;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.list-price {
+}
+.sale-price {
+  font-weight: bolder;
+}
+.list-price::before {
+  content: "list";
+  display: block;
+  font-size: 0.8em;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: lighter;
+}
+.sale-price::before {
+  content: "sale";
+  display: block;
+  font-size: 0.8em;
+  text-transform: capitalize;
+  font-weight: lighter;
+}
+.price-list {
+  text-align: center;
+}
+.price-container li {
+  vertical-align: middle;
+}
+
+.collector-container {
+  padding: 0.5em;
+  text-align: center;
+}
+.collector-container label {
+  display: block;
+  color: #333;
+  font-size: 1.2em;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.collector-container input[type="text"],
+.collector-container input[type="email"] {
+  padding: 1em;
+  width: 100%;
+  max-width: 25em;
+  margin: 1em auto;
+  border-radius: 0.75em;
+  border: 0.15em solid #168641;
+  text-transform: capitalize;
+}
+.collector-container select {
+  padding: 1em;
+  width: 100%;
+  max-width: 25em;
+  margin: 1em auto;
+  border-radius: 0.75em;
+  border: 0.15em solid #168641;
+  background: white;
+  cursor: pointer;
+}
+.spinner {
+  width: 2em;
+  font-size: 1em;
+  vertical-align: middle;
+  display: inline-block;
+  border: 0;
+  padding: 0.25em 0.2em;
+  text-align: center;
+}
+
+.minus-button,
+.plus-button {
+  color: #044f20;
+  background: transparent;
+  border: 0;
+  border-radius: 5em;
+  cursor: pointer;
+  padding: 0.25em;
+}
+.spinner-container {
+  border-radius: 5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  max-width: 6em;
+  border: 0.15em solid #044f20;
+  background: white;
+}
+
+@media (max-width: 650px) {
+  .spinner-container {
+    /*! max-width: 2.5em; */
+    text-align: center;
+    transform: scaleY(-1);
+    /*! height: auto; */
+  }
+  .spinner {
+    display: block;
+    margin: 0 auto;
+    transform: scaleY(-1);
+  }
+  .price-container li:nth-child(1) {
+    width: 10%;
+  }
+  .collector-container {
+    width: 100%;
+  }
+  .minus-button,
+  .plus-button {
+    padding: 0;
+  }
+}
+#reservation-controls {
+  text-align: center;
+}
+#reserve-now {
+  display: none;
+}
+#addToCartSubmit {
+  background-color: #044f20;
+  color: #fafafa;
+  font-size: 1em;
+  padding: 0.5em 2.5em;
+  border-radius: 2em;
+  text-transform: capitalize;
+  border: 0;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Kaushan Script";
+}
+@media (max-width: 800px) {
+  .price-list {
+    font-size: 1.25em;
+  }
+  .ui-datepicker table {
+    font-size: 0.75em;
+  }
+}

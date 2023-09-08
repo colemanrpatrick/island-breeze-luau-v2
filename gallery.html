@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Island Breeze Luau - Official Site</title>
+	<meta content="user-scalable = yes, width=320, initial-scale=1" name="viewport">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="css/main.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;600&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body>
+	<main>
+		<!-- ======================================================= -->
+		<header id="masthead">
+			<ul>
+				<li id="logo">
+					<a href="#">
+						<img alt="island-breeze-luau-official" src="images/islandbreezeluau-logo.png">
+					</a>
+				</li>
+				<li>
+					<a href="tel:+18664829775" id="phone-desktop"><span>(toll free)</span><span
+							class="material-symbols-outlined">call</span> 1-866-482-9775</a>
+					<nav id="main-nav">
+						<a href="/reservations.htm">reservations</a>
+						<a href="/menu.htm">menu</a>
+						<a href="/location.htm">location</a>
+						<a href="/royal-court.htm">royal court</a>
+						<a href="/photos.htm">luau photos</a>
+						<a href="/faq.htm">FAQs</a>
+						<a href="/contact-us.htm">contact</a>
+						<a href="/cart/edit#viewitems"><span class="material-symbols-outlined">shopping_cart</span>cart</a>
+					</nav>
+					<a href="tel:+18664829775" id="phone-mobile"><span class="material-symbols-outlined">call</span></a>
+					<button class="menu-btn" id="menu-btn" name="button"
+						onclick="idToggle('menu-btn','active');idToggle('main-nav','active')" type="button">
+						<hr class="menu-btn-hr-1">
+						<hr class="menu-btn-hr-2">
+						<hr class="menu-btn-hr-3">
+					</button>
+				</li>
+			</ul>
+		</header>
+		<!-- ======================================================= -->
+		<div id="return-top">
+			<span class="material-symbols-outlined">arrow_circle_up</span>
+			<p>top</p>
+		</div>
+		<script type="text/javascript">
+			const returnTo = document.getElementById("return-top");
+			returnTo.onclick = function () {
+				window.scrollTo({
+					top: 0,
+					left: 0,
+					behavior: 'smooth'
+				});
+			}
+		</script>
+    <!-- ================================= -->
+    <!-- ||||||||||||||||||||||||||||||||| -->
+    <!-- ================================= -->
+	<link rel="stylesheet" href="css/misc.css">
+	<link rel="stylesheet" href="css/gallery.css">
+	<div id="gallery-header" class="simple-hero">
+		<h1>gallery</h1>
+	</div>
+	<div id="gallery-container" class="fifth-content">
+		<div class="content-border"></div>
+		<div class="fifth-content-row">
+			<div id="gallery">
+				<h3>photo gallery</h3>
+				<div id="photo-gallery" class="photo-gallery">
+				  <button id="photo-close-btn"><span class="material-symbols-outlined">close</span></button>
+				  <div id="photo-controls"></div>
+				</div>
+			  </div>
+		</div>
+		<div class="content-border"></div>
+	</div>
+	<script src="js/gallery.js"></script>
+	<!-- ================================= -->
+	<!-- ||||||||||||||||||||||||||||||||| -->
+	<!-- ================================= -->
+		<a href="" id="facebook-bar">
+			<img src="images/facebook-icon.png" alt="">
+			<h2>follow us on facebook</h2>
+		</a>
+		<footer>
+			<ul>
+				<li id="footer-left">
+						<a href="/"><img alt="island-breeze-luau-official" src="images/islandbreezeluau-logo.png"></a>
+						<a href="tel:+18664829775" id="phone-desktop"><span>(toll free)</span><span class="material-symbols-outlined">call</span> 1-866-482-9775</a>
+						<a href="https://www.google.com/maps/place/Sea+Life+Park+Hawaii/@21.3137242,-157.6636201,15z/data=!4m5!3m4!1s0x0:0x5def94f09ab5dc01!8m2!3d21.3137242!4d-157.6636201" target="_blank">
+							<span class="material-symbols-outlined">pin_drop</span><p>41-202 Kalanianaʻole Hwy,<br/> Waimanalo, HI 96795</p>
+						</a>
+				</li>
+				<li id="footer-right">
+					<a href="/reservations.htm">reservations</a>
+					<a href="/menu.htm">menu</a>
+					<a href="/location.htm">location</a>
+					<a href="/royal-court.htm">royal court</a>
+					<a href="/photos.htm">luau photos</a>
+					<a href="/faq.htm">FAQs</a>
+					<a href="/contact-us.htm">contact</a>
+					<a href="/cart/edit#viewitems"><span class="material-symbols-outlined">shopping_cart</span>cart</a>
+				</li>
+				<li id="footer-aside">
+					<img src="images/westhawaii-best-of-hawaii-2022.png" alt="">
+					<img src="images/islandbreezeproductions.png" alt="">
+				</li>
+			</ul>
+			<aside style="font-family: sans-serif">Copyright (c) 2023 Hawaii Luaus All Rights Reserved. <a
+					href="#">login</a></aside>
+		</footer>
+	</main>
+	<script src="js/toggle.js" type="text/javascript">
+	</script>
+	<script src="js/main.js" type="text/javascript">
+	</script>
+</body>
+
+</html>
