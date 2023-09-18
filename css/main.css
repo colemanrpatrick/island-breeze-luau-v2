@@ -1,4 +1,4 @@
-*, *:before, *:after {
+ *, *:before, *:after {
 	margin: 0;
 	padding: 0;
 	-webkit-box-sizing: border-box !important;
@@ -30,17 +30,17 @@ body {
 	width: 100%;
 	position: relative;
 	overflow-x: hidden;
-	font-size: 32px;
+	font-size: 24px;
 	background-color: #345861;
 }
 @media(max-width:2280px) {
 	body {
-		font-size: 28px;
+		font-size: 22px;
 	}
 }
 @media(max-width:2160px) {
 	body {
-		font-size: 24px;
+		font-size: 20px;
 	}
 }
 @media(max-width:1800px) {
@@ -68,6 +68,10 @@ h1, h2, h3, h4, h5 {
 }
 p, a, b{
 	font-family: 'Montserrat', system-ui, sans-serif;
+}
+.divider {
+  height: 7em;
+  border: 0;
 }
 /*======== mobile menu btn =========*/
 .menu-btn {
@@ -950,7 +954,7 @@ p, a, b{
 }
 .fifth-content-row {
 	background-image: url("../images/tapasTransparent.png");
-	padding: 6em 2em;
+	padding: 2em 2em;
 	text-align: center;
 	background-size: 10em;
   }
@@ -958,6 +962,7 @@ p, a, b{
 	font-size: 2.5em;
 	line-height: 2em;
 	color: #044f20;
+	margin-top: 1em;
   }
   .fifth-content-row article {
 	line-height: 2em;
@@ -970,6 +975,15 @@ p, a, b{
   color: #044f20;
   margin-top: 1em;
   font-size: 1.35em;
+}
+.fifth-content-row article span {
+	font-family: "Kaushan Script";
+	font-size: 2em;
+	color: #2c6458;
+	padding-right: 0.15em;
+}
+.fifth-content-row article p {
+	padding: 1em;
 }
 #faq-link {
   font-family: "Kaushan Script";
@@ -1144,3 +1158,131 @@ footer li{
 		background-size: cover;
 	}
 }
+.med-hero {
+  height: 24em;
+  background: #2c6458;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#location {
+  background-image: url("../images/islandbreeze-luau-grounds.jpg");
+}
+#ahuena-heiau{
+  background-image: url("../images/island-breeze-courtyard-mariot-kona.jpg");
+}
+#royal-court{
+  background-image: url("../images/islandbreeze-luau-kamehameha-large.png");
+}
+#faq {
+  background-image: url("../images/islandbreezeohanaluaubanner.jpg");
+  background-position: top;
+}
+.med-hero h1,.med-hero h2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+  text-shadow: 0em 0em 0.5em black;
+  line-height: 1em;
+}
+.med-hero span {
+  font-family: "montserrat";
+  font-size: 0.7em;
+  line-height: ;
+}
+
+
+#menu-hero {
+	background: url("../images/island-breeze-courtyard-mariot-kona.jpg");
+	background-size: cover;
+	background-position: center;
+  }
+  #luau-menu ul {
+	column-count: 2;
+	padding: 1em;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+  }
+  #luau-menu img {
+	width: 100%;
+  }
+  #luau-menu li {
+	font-size: 1em;
+	font-family: "Montserrat";
+	font-weight: bold;
+	line-height: 2em;
+	text-align: center;
+	color: #252128;
+  }
+  @media(max-width:500px){
+	#luau-menu ul{
+	  column-count: 1;
+	}
+  }
+  #luau-menu .fifth-content-row {
+	  padding: 2em;
+  }
+  /*=====================*/
+  .accordion{
+	width: 100%;
+	background-color: beige;
+	max-width: 1200px;
+	margin: 0em auto;
+  }
+  .accordion .tab{
+	  width: 100%;
+	  list-style-type: none;
+  }
+  .accordion .tab header {
+	  padding: 1.25em;
+	  text-align: center;
+	  text-transform: capitalize;
+	  font-weight: 100;
+	  border-bottom: 2px solid #377f91;
+	  color: white;
+	  cursor: pointer;
+	transition: 0.3s;
+	  font-family: "Kaushan Script";
+	  background: #345861;
+  }
+  .accordion .tab.active header{
+	color:white;
+	background: #5bacd3;
+  }
+  .accordion .tab .accordion-content {
+	  width: 100%;
+	  padding: 2em 0.5em;
+	  text-align: center;
+	  transform-origin: top;
+	  border: 2px solid #fe949469;
+	  background: white;
+  }
+  .accordion .tab .accordion-content p {
+	  font-size: 1em;
+	  font-weight: 300;
+	  line-height: 2.5em;
+	  margin: 0 auto;
+	  width: 90%;
+  }
+  .accordion .tab .accordion-content{
+	  display: none;
+  }
+  @-webkit-keyframes fadeIn {
+	  0%{ transform: scaleY(0) }
+	  100%{ transform: scaleY(1)}
+  }
+  @-moz-keyframes fadeIn {
+	  0%{ transform: scaleY(0) }
+	  100%{ transform: scaleY(1)}
+  }
+  .accordion .tab.active .accordion-content{
+	  display: block;
+	height: auto;
+	  -webkit-animation: fadeIn 0.3s ease-out;
+	  -moz-animation: fadeIn 0.3s ease-out;
+  }
