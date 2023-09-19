@@ -17,7 +17,7 @@ let createPage2 = () => {
  };
  let createPage3 = () => {
     createReservationPage("page3");
-    createTitle("page3","Lastly, Party Name & Details");
+    createTitle("page3","Party Name & Details");
     showCollectors("page3",cartData.Collectors);
     showEmailPhoneTemplate("page3");
  };
